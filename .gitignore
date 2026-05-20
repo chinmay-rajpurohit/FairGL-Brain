@@ -1,0 +1,9 @@
+mlgpu/
+__pycache__/
+*.pyc
+data/
+processed/*.pt
+processed/*.pkl
+results/*.pt
+results/*.png
+.cache/
