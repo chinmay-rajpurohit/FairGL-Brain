@@ -1,20 +1,201 @@
-# Nilearn data folder
+# FairGL-Brain
 
-This directory is used by Nilearn to store datasets
-and atlases downloaded from the internet.
-It can be safely deleted.
-If you delete it, previously downloaded data will be downloaded again.
+**FairGL-Brain** is a final-year thesis project for fairness-aware graph-language learning in brain functional analysis. The project studies ASD classification on the ABIDE resting-state fMRI dataset using functional connectivity graphs, clinical-style text prompts, ROI-level neurobiological priors, graph-text alignment, and fairness evaluation across sensitive groups.
 
+Full thesis title:
 
+**Fairness-Aware Graph-Language Alignment for Brain Functional Analysis**
 
-## Brain Graph Construction
+## Overview
 
-Each subject is represented as a brain functional connectivity graph constructed from resting-state fMRI using the AAL116 atlas.
+The framework represents each subject as a brain functional connectivity graph built from AAL116 ROI time-series. It then combines graph representations with BioClinicalBERT-based text embeddings derived from subject-level clinical-style prompts and ROI prior descriptions.
 
-- **Nodes:**  
-  116 brain Regions of Interest (ROIs), where each node corresponds to one anatomical brain region.
+The goal is not only to classify ASD vs Typical Control, but also to evaluate and reduce performance disparities across demographic and acquisition-related groups such as sex, age group, and imaging site.
 
-- **Edges:**  
-  Functional connectivity between pairs of ROIs computed using Pearson correlation of ROI time-series signals.
+## Main Components
 
+- **Brain graph construction** from ABIDE resting-state fMRI using Nilearn.
+- **AAL116 ROI connectivity matrices** as graph node features.
+- **Normalized adjacency matrices** from thresholded functional connectivity.
+- **Subject text prompts** based on non-label-leaking imaging and scan-quality information.
+- **ROI-level priors** describing neurobiological functions of brain regions.
+- **Medical language embeddings** generated using BioClinicalBERT.
+- **Graph-text fusion and alignment** using a GCN-style graph encoder and text projection head.
+- **Fairness-aware training** using group loss-gap regularization.
+- **Fairness evaluation** across sex, age group, and site.
+- **Tuned full model** with validation threshold selection and early stopping.
+
+## Repository Structure
+
+```text
+FairGL-Brain/
+├── build_dataset.py
+├── build_population_graph.py
+├── generate_text_embeddings.py
+├── train_gcn.py
+├── train_gcn_fairness.py
+├── train_graph_text_fusion.py
+├── train_graph_text_alignment.py
+├── train_full_fairness_model.py
+├── train_full_fairness_model_experimental.py
+├── models/
+│   ├── gcn_model.py
+│   └── graph_text_model.py
+├── utils/
+│   └── fairness_metrics.py
+├── data/
+│   └── aal_roi_priors.csv
+├── processed/
+└── results/
+```
+
+Large generated files such as raw ABIDE data, processed tensors, checkpoints, and local virtual environments are intentionally excluded from Git.
+
+## Dataset
+
+The project uses ABIDE through:
+
+```python
+nilearn.datasets.fetch_abide_pcp
+```
+
+The processed dataset is saved as:
+
+```text
+processed/abide_graph_dataset.pkl
+```
+
+Each subject contains:
+
+- `graphs`: 116 x 116 functional connectivity matrix
+- `adjs`: normalized adjacency matrix
+- `labels`: `1 = ASD`, `0 = Typical Control`
+- `sexes`: `1 = male`, `2 = female`
+- `ages`
+- `sites`
+- `prompts`
+
+## Pipeline
+
+Run the pipeline in this order:
+
+```powershell
+python build_dataset.py
+python generate_text_embeddings.py
+python build_population_graph.py
+```
+
+Then run model experiments:
+
+```powershell
+python train_gcn.py
+python train_gcn_fairness.py
+python train_graph_text_fusion.py
+python train_graph_text_alignment.py
+python train_full_fairness_model.py
+```
+
+## Main Training Script
+
+The main final model is:
+
+```text
+train_full_fairness_model.py
+```
+
+It includes:
+
+- 70/10/20 train-validation-test split
+- early stopping
+- validation-based threshold tuning
+- fairness-aware threshold score
+- graph-text alignment loss
+- group fairness loss
+- sex, age, and site fairness metrics
+- model checkpoint saving
+
+Best checkpoint:
+
+```text
+results/best_full_fairness_model_tuned.pt
+```
+
+## Current Results
+
+The latest comparison table is saved in:
+
+```text
+results/final_comparison_table.csv
+results/final_comparison_table.md
+results/final_comparison_table.png
+```
+
+Summary from the latest experimental run:
+
+| Model | Accuracy | F1 | Sex Accuracy Gap |
+|---|---:|---:|---:|
+| GCN Basic | 0.5600 | 0.6244 | N/A |
+| GCN Graph-only Fairness Eval | 0.5486 | 0.6070 | 0.1067 |
+| Graph + Text Fusion | 0.5371 | 0.0000 | 0.0267 |
+| Graph + Text + Alignment | 0.5371 | 0.0000 | 0.0267 |
+| Full Fairness-Aware Model Tuned | 0.5657 | 0.6696 | 0.0067 |
+
+The tuned full model achieves the strongest F1 score and the lowest sex accuracy gap among the evaluated models.
+
+## Fairness Metrics
+
+The project reports:
+
+- Accuracy
+- F1 score
+- Precision
+- Recall
+- Male accuracy
+- Female accuracy
+- Sex accuracy gap
+- Sex demographic parity gap
+- Sex equal opportunity gap
+- Age group accuracy gap
+- Age worst-group accuracy
+- Site accuracy gap
+- Site worst-group accuracy
+
+Site groups with very small test counts are ignored in the tuned site-gap calculation to reduce unstable estimates.
+
+## Environment
+
+Recommended environment:
+
+```text
+Python 3.11
+PyTorch
+TorchVision / TorchAudio if needed
+Nilearn
+NumPy
+Pandas
+scikit-learn
+Transformers
+Matplotlib
+TQDM
+```
+
+Activate the local environment if using the included local setup:
+
+```powershell
 .\mlgpu\Scripts\activate
+```
+
+## Notes
+
+- Diagnosis labels are not inserted into text prompts.
+- Sensitive attributes are used for fairness evaluation and regularization, not as direct prediction targets.
+- Processed tensors and ABIDE data are not committed because they are large/generated artifacts.
+- Results can vary slightly across runs because neural training is stochastic.
+
+## Citation
+
+If referencing this project, use:
+
+```text
+FairGL-Brain: Fairness-Aware Graph-Language Alignment for Brain Functional Analysis
+```

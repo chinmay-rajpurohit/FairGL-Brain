@@ -1,7 +1,8 @@
 mlgpu/
 __pycache__/
 *.pyc
-data/
+data/*
+!data/aal_roi_priors.csv
 processed/*.pt
 processed/*.pkl
 results/*.pt

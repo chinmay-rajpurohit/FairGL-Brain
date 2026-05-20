@@ -1,0 +1,117 @@
+roi_index,roi_name,prior_text
+0,Precentral_L,Left precentral gyrus supports voluntary motor control and movement execution.
+1,Precentral_R,Right precentral gyrus supports voluntary motor control and movement execution.
+2,Frontal_Sup_L,Left superior frontal gyrus supports executive control working memory and attention.
+3,Frontal_Sup_R,Right superior frontal gyrus supports executive control working memory and attention.
+4,Frontal_Sup_Orb_L,Left orbital superior frontal cortex supports reward valuation and affective decision making.
+5,Frontal_Sup_Orb_R,Right orbital superior frontal cortex supports reward valuation and affective decision making.
+6,Frontal_Mid_L,Left middle frontal gyrus supports cognitive control planning and working memory.
+7,Frontal_Mid_R,Right middle frontal gyrus supports cognitive control planning and working memory.
+8,Frontal_Mid_Orb_L,Left orbital middle frontal cortex supports emotion regulation and reward processing.
+9,Frontal_Mid_Orb_R,Right orbital middle frontal cortex supports emotion regulation and reward processing.
+10,Frontal_Inf_Oper_L,Left opercular inferior frontal gyrus supports speech production and inhibitory control.
+11,Frontal_Inf_Oper_R,Right opercular inferior frontal gyrus supports inhibitory control and social communication.
+12,Frontal_Inf_Tri_L,Left triangular inferior frontal gyrus supports language processing and semantic selection.
+13,Frontal_Inf_Tri_R,Right triangular inferior frontal gyrus supports semantic control and social cognition.
+14,Frontal_Inf_Orb_L,Left orbital inferior frontal cortex supports reward evaluation and emotional decision making.
+15,Frontal_Inf_Orb_R,Right orbital inferior frontal cortex supports reward evaluation and emotional decision making.
+16,Rolandic_Oper_L,Left rolandic operculum supports speech articulation sensorimotor integration and oral motor control.
+17,Rolandic_Oper_R,Right rolandic operculum supports sensorimotor integration speech prosody and oral motor control.
+18,Supp_Motor_Area_L,Left supplementary motor area supports motor planning sequence control and action initiation.
+19,Supp_Motor_Area_R,Right supplementary motor area supports motor planning sequence control and action initiation.
+20,Olfactory_L,Left olfactory cortex supports smell perception and affective odor processing.
+21,Olfactory_R,Right olfactory cortex supports smell perception and affective odor processing.
+22,Frontal_Sup_Medial_L,Left medial superior frontal cortex supports self-referential thought and executive control.
+23,Frontal_Sup_Medial_R,Right medial superior frontal cortex supports self-referential thought and executive control.
+24,Frontal_Med_Orb_L,Left medial orbital frontal cortex supports reward valuation mood regulation and decision making.
+25,Frontal_Med_Orb_R,Right medial orbital frontal cortex supports reward valuation mood regulation and decision making.
+26,Rectus_L,Left gyrus rectus supports reward processing emotion and social evaluation.
+27,Rectus_R,Right gyrus rectus supports reward processing emotion and social evaluation.
+28,Insula_L,Left insula supports interoception salience detection and emotional awareness.
+29,Insula_R,Right insula supports interoception salience detection and emotional awareness.
+30,Cingulum_Ant_L,Left anterior cingulate supports conflict monitoring emotion regulation and cognitive control.
+31,Cingulum_Ant_R,Right anterior cingulate supports conflict monitoring emotion regulation and cognitive control.
+32,Cingulum_Mid_L,Left middle cingulate supports attention motor control and pain processing.
+33,Cingulum_Mid_R,Right middle cingulate supports attention motor control and pain processing.
+34,Cingulum_Post_L,Left posterior cingulate supports default mode processing memory and self-referential cognition.
+35,Cingulum_Post_R,Right posterior cingulate supports default mode processing memory and self-referential cognition.
+36,Hippocampus_L,Left hippocampus supports episodic memory formation spatial navigation and learning.
+37,Hippocampus_R,Right hippocampus supports episodic memory formation spatial navigation and learning.
+38,ParaHippocampal_L,Left parahippocampal gyrus supports contextual memory scene processing and navigation.
+39,ParaHippocampal_R,Right parahippocampal gyrus supports contextual memory scene processing and navigation.
+40,Amygdala_L,Left amygdala supports emotion processing threat detection and affective learning.
+41,Amygdala_R,Right amygdala supports emotion processing threat detection and affective learning.
+42,Calcarine_L,Left calcarine cortex supports primary visual processing.
+43,Calcarine_R,Right calcarine cortex supports primary visual processing.
+44,Cuneus_L,Left cuneus supports visual attention and basic visual processing.
+45,Cuneus_R,Right cuneus supports visual attention and basic visual processing.
+46,Lingual_L,Left lingual gyrus supports visual recognition and visual memory.
+47,Lingual_R,Right lingual gyrus supports visual recognition and visual memory.
+48,Occipital_Sup_L,Left superior occipital cortex supports visual perception and spatial visual processing.
+49,Occipital_Sup_R,Right superior occipital cortex supports visual perception and spatial visual processing.
+50,Occipital_Mid_L,Left middle occipital cortex supports visual object and motion processing.
+51,Occipital_Mid_R,Right middle occipital cortex supports visual object and motion processing.
+52,Occipital_Inf_L,Left inferior occipital cortex supports visual object recognition.
+53,Occipital_Inf_R,Right inferior occipital cortex supports visual object recognition.
+54,Fusiform_L,Left fusiform gyrus supports face object and word form recognition.
+55,Fusiform_R,Right fusiform gyrus supports face object and word form recognition.
+56,Postcentral_L,Left postcentral gyrus supports primary somatosensory processing.
+57,Postcentral_R,Right postcentral gyrus supports primary somatosensory processing.
+58,Parietal_Sup_L,Left superior parietal lobule supports spatial attention and sensorimotor integration.
+59,Parietal_Sup_R,Right superior parietal lobule supports spatial attention and sensorimotor integration.
+60,Parietal_Inf_L,Left inferior parietal lobule supports attention language and multisensory integration.
+61,Parietal_Inf_R,Right inferior parietal lobule supports attention language and multisensory integration.
+62,SupraMarginal_L,Left supramarginal gyrus supports phonological processing empathy and sensorimotor integration.
+63,SupraMarginal_R,Right supramarginal gyrus supports social cognition attention and sensorimotor integration.
+64,Angular_L,Left angular gyrus supports semantic processing reading and default mode cognition.
+65,Angular_R,Right angular gyrus supports semantic processing attention and social cognition.
+66,Precuneus_L,Left precuneus supports self-referential cognition visuospatial imagery and default mode processing.
+67,Precuneus_R,Right precuneus supports self-referential cognition visuospatial imagery and default mode processing.
+68,Paracentral_Lobule_L,Left paracentral lobule supports lower limb motor and somatosensory function.
+69,Paracentral_Lobule_R,Right paracentral lobule supports lower limb motor and somatosensory function.
+70,Caudate_L,Left caudate supports action selection habit learning and cognitive control.
+71,Caudate_R,Right caudate supports action selection habit learning and cognitive control.
+72,Putamen_L,Left putamen supports motor control habit learning and reward processing.
+73,Putamen_R,Right putamen supports motor control habit learning and reward processing.
+74,Pallidum_L,Left pallidum supports basal ganglia motor regulation and action control.
+75,Pallidum_R,Right pallidum supports basal ganglia motor regulation and action control.
+76,Thalamus_L,Left thalamus supports sensory relay attention and cortical communication.
+77,Thalamus_R,Right thalamus supports sensory relay attention and cortical communication.
+78,Heschl_L,Left Heschl gyrus supports primary auditory processing.
+79,Heschl_R,Right Heschl gyrus supports primary auditory processing.
+80,Temporal_Sup_L,Left superior temporal gyrus supports auditory language and social perception.
+81,Temporal_Sup_R,Right superior temporal gyrus supports auditory processing prosody and social perception.
+82,Temporal_Pole_Sup_L,Left superior temporal pole supports semantic memory and social emotional processing.
+83,Temporal_Pole_Sup_R,Right superior temporal pole supports semantic memory and social emotional processing.
+84,Temporal_Mid_L,Left middle temporal gyrus supports semantic language and memory processing.
+85,Temporal_Mid_R,Right middle temporal gyrus supports semantic language and social cognition.
+86,Temporal_Pole_Mid_L,Left middle temporal pole supports semantic memory and social emotional cognition.
+87,Temporal_Pole_Mid_R,Right middle temporal pole supports semantic memory and social emotional cognition.
+88,Temporal_Inf_L,Left inferior temporal gyrus supports object recognition semantic memory and visual processing.
+89,Temporal_Inf_R,Right inferior temporal gyrus supports object recognition semantic memory and visual processing.
+90,Cerebelum_Crus1_L,Left cerebellar crus I supports cognitive control language and motor coordination.
+91,Cerebelum_Crus1_R,Right cerebellar crus I supports cognitive control language and motor coordination.
+92,Cerebelum_Crus2_L,Left cerebellar crus II supports executive function language and social cognition.
+93,Cerebelum_Crus2_R,Right cerebellar crus II supports executive function language and social cognition.
+94,Cerebelum_3_L,Left cerebellar lobule III supports motor coordination.
+95,Cerebelum_3_R,Right cerebellar lobule III supports motor coordination.
+96,Cerebelum_4_5_L,Left cerebellar lobules IV and V support motor coordination and sensorimotor learning.
+97,Cerebelum_4_5_R,Right cerebellar lobules IV and V support motor coordination and sensorimotor learning.
+98,Cerebelum_6_L,Left cerebellar lobule VI supports motor timing attention and cognitive control.
+99,Cerebelum_6_R,Right cerebellar lobule VI supports motor timing attention and cognitive control.
+100,Cerebelum_7b_L,Left cerebellar lobule VIIb supports cognitive control and sensorimotor integration.
+101,Cerebelum_7b_R,Right cerebellar lobule VIIb supports cognitive control and sensorimotor integration.
+102,Cerebelum_8_L,Left cerebellar lobule VIII supports motor coordination and sensorimotor processing.
+103,Cerebelum_8_R,Right cerebellar lobule VIII supports motor coordination and sensorimotor processing.
+104,Cerebelum_9_L,Left cerebellar lobule IX supports default mode cognition and autonomic regulation.
+105,Cerebelum_9_R,Right cerebellar lobule IX supports default mode cognition and autonomic regulation.
+106,Cerebelum_10_L,Left cerebellar lobule X supports vestibular processing and balance.
+107,Cerebelum_10_R,Right cerebellar lobule X supports vestibular processing and balance.
+108,Vermis_1_2,Vermis lobules I and II support posture balance and autonomic regulation.
+109,Vermis_3,Vermis lobule III supports posture balance and motor coordination.
+110,Vermis_4_5,Vermis lobules IV and V support posture motor coordination and sensorimotor control.
+111,Vermis_6,Vermis lobule VI supports motor coordination and attentional control.
+112,Vermis_7,Vermis lobule VII supports cognitive control and affective regulation.
+113,Vermis_8,Vermis lobule VIII supports motor coordination and gait control.
+114,Vermis_9,Vermis lobule IX supports autonomic regulation and default mode interactions.
+115,Vermis_10,Vermis lobule X supports vestibular balance and autonomic function.
