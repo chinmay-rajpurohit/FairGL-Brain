@@ -120,28 +120,6 @@ Best checkpoint:
 results/best_full_fairness_model_tuned.pt
 ```
 
-## Current Results
-
-The latest comparison table is saved in:
-
-```text
-results/final_comparison_table.csv
-results/final_comparison_table.md
-results/final_comparison_table.png
-```
-
-Summary from the latest experimental run:
-
-| Model | Accuracy | F1 | Sex Accuracy Gap |
-|---|---:|---:|---:|
-| GCN Basic | 0.5600 | 0.6244 | N/A |
-| GCN Graph-only Fairness Eval | 0.5486 | 0.6070 | 0.1067 |
-| Graph + Text Fusion | 0.5371 | 0.0000 | 0.0267 |
-| Graph + Text + Alignment | 0.5371 | 0.0000 | 0.0267 |
-| Full Fairness-Aware Model Tuned | 0.5657 | 0.6696 | 0.0067 |
-
-The tuned full model achieves the strongest F1 score and the lowest sex accuracy gap among the evaluated models.
-
 ## Fairness Metrics
 
 The project reports:
